@@ -77,5 +77,6 @@ type JsRespValue =
   JsRespMap |
   JsRespNil |
   JsRespPush |
+  JsRespSet |
   JsRespString |
   JsRespVerbatim
