@@ -1,12 +1,12 @@
-use bradis::{run_until_stalled, Server};
+use bradis::{Server, run_until_stalled};
 use futures::{
     executor::block_on,
     stream::BoxStream,
-    task::{noop_waker_ref, Context},
+    task::{Context, noop_waker_ref},
 };
 use respite::{RespError, RespPrimitive, RespReader, RespValue, RespWriter};
 use std::task::Poll;
-use tokio::io::{duplex, split, DuplexStream, WriteHalf};
+use tokio::io::{DuplexStream, WriteHalf, duplex, split};
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
